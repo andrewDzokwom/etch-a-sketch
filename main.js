@@ -16,17 +16,22 @@ function createGrid(gridSize) {
         
     }
 }
-const items = document.querySelectorAll(".item");
-items.forEach(item => {
-    console.log('The itm is: ', item);
-    
-    item.onmouseover = () => {
-        item.classList.add("blue");
-    }
-})
-console.log(items);
-
-
 createGrid(parseInt(prompt("Enter grid size: ")));
 
-console.log(items);
+const items = document.querySelectorAll(".item");
+
+items.forEach(item => {
+    console.log('The item is: ', item);
+    
+    item.addEventListener('mouseover', (e)=>{
+        console.log(e);
+        item.classList.add('blue');
+        
+    })
+})
+console.log(items.forEach(item => {
+    console.log('The is from items in main: ', item);
+}));
+
+
+
